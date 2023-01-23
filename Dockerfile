@@ -1,4 +1,5 @@
-FROM ubuntu  
-RUN apt install apache2 -y  
+FROM ubuntu
+RUN apt-get update -y  
+RUN apt-get install apache2 -y  
 EXPOSE 82
 CMD [“apache2ctl”, “-D”, “FOREGROUND”]
