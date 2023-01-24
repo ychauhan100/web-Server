@@ -1,9 +1,9 @@
 FROM ubuntu:latest
 
 RUN apt-get update &&
-apt-get install -y apache2 &&
-apt-get clean &&
-rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y apache2 &&
+RUN apt-get clean &&
+RUN rm -rf /var/lib/apt/lists/*
 
 EXPOSE 82
 
