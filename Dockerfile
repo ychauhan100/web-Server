@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-RUN apt-get update &&
-RUN apt-get install apache2 -y
+FROM node:12.2.0-alpine
+WORKDIR app
+RUN npm install
 EXPOSE 82
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+CMD ["node","app.js"]
